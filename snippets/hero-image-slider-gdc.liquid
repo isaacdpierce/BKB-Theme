@@ -1,0 +1,25 @@
+<!-- snippets/hero-image-slider-gdc.liquid -->
+
+<div class="gdc-hero__image-slider">
+  {% assign booklets = collections.booklets %}
+
+  {% for product in collections["booklets"].products %}
+    {% assign product_image = product.featured_image %}
+
+    {%- if product_image != blank -%}		
+      <div class="gdc-hero__item">
+        <a href="{{ product.url }}">
+          <img src="{{ product_image | img_url: '600x' }}">
+        </a>
+      </div>
+
+      <noscript>
+        <div class="logo-list__item no-js-image" style="background-image: url( {{ product_image | img_url: '600x' }} );"></div>
+      </noscript>
+    {%- else -%}
+      <div class="logo-list__item svg-placeholder">
+        {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

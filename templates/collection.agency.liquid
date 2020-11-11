@@ -1,0 +1,37 @@
+<!-- /templates/collection-agency-template.liquid -->
+
+<section class="collection collection-{{ collection.handle }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection"
+  data-section-type="collection-grid"
+  data-section-type="collection-hero"
+  data-collection="{{ collection.url | default: '/collections/all' }}">
+
+{% section 'gdc-agency-chart'%}
+
+  <div class="collection__products">
+    <form  id="collection-agency-add" action="/cart/update" method="post" enctype="multipart/form-data">    
+      <div class="agency-product-grid" id="CollectionLoop">  
+          {% assign product_type = '' %}
+          	{%- for product in collection.products -%}
+        <script type="application/json" class="bold-product-json">{{ product | json }}</script>
+
+          		{% if product_type != product.type %}
+              {% assign product_type = product.type %}
+                 <h3 class="agency-product-grid__heading">{{ product_type }}</h3>
+          		{% endif %}	
+          	{%- include 'agency-product-grid-item' -%}
+          {%- endfor -%}      
+          <button class="btn btn--large btn--full agency-product-grid__buy" type="submit" name="add" id="collection-agency-add">{{ 'products.product.add_to_cart' | t }}</button>
+      </div>
+    </form> 
+  </div>
+
+  <div class="collection__loader">
+    <div class="loader">
+      <div class="loader-indeterminate"></div>
+    </div>
+  </div>
+
+</section>
+

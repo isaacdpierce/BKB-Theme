@@ -1,0 +1,8 @@
+<div class="blog-title-wrapper">
+  <h1 class="blog-title">{{ blog.title }}
+    {% if showRSS %}
+      <a class="icon-rss" href="{{blog.title}}.atom" target="_blank"><i class="oi" data-glyph="rss"></i></a>
+    {% endif %}
+  </h1>
+  {% include 'search-articles' %}
+</div>

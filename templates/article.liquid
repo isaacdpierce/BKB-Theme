@@ -1,0 +1,97 @@
+<!-- /templates/blog.liquid -->
+
+{% section 'article' %}
+
+{%- if article.metafields.related_products.handles != blank -%}
+  {%- assign handles = article.metafields.related_products.handles | split: ',' -%}
+
+  {%- case handles.size -%}
+    {%- when 2 -%}
+      {%- assign grid_width_large = 'large-up--one-half' -%}
+      {%- assign grid_width_medium = 'medium--one-half' -%}
+      {%- assign grid_width_small = 'small--one-half' -%}
+    {%- when 3 -%}
+      {%- assign grid_width_large = 'large-up--one-third' -%}
+      {%- assign grid_width_medium = 'medium--one-third' -%}
+      {%- assign grid_width_small = 'small--one-whole' -%}
+    {%- when 4 -%}
+      {%- assign grid_width_large = 'large-up--one-quarter' -%}
+      {%- assign grid_width_medium = 'medium--one-half' -%}
+      {%- assign grid_width_small = 'small--one-half' -%}
+    {%- when 5 -%}
+      {%- assign grid_width_large = 'large-up--one-fifth' -%}
+      {%- assign grid_width_medium = 'medium--one-third' -%}
+      {%- assign grid_width_small = 'small--one-half' -%}
+    {%- else -%}
+      {%- assign grid_width_large = 'large-up--one-sixth' -%}
+      {%- assign grid_width_medium = 'medium--one-third' -%}
+      {%- assign grid_width_small = 'small--one-half' -%}
+  {%- endcase -%}
+
+  <div class="gdc-article-related-products product-grid">
+    {%- for handle in handles -%}
+      {%- assign format_handle = handle | strip -%}
+      {%- assign product = all_products[format_handle] -%}
+      {%- assign showQuickView = settings.quickview_enable -%}
+
+      {%- include 'product-grid-item',
+          quick_view: showQuickView,
+          last_element: false,
+          grid_width_small: grid_width_small,
+          grid_width_medium: grid_width_medium,
+          grid_width_large: grid_width_large
+      -%}
+
+      {%- if showQuickView -%}
+        {% capture sectionkey %}Product{{ forloop.index0 }}{{ paginate.current_page }}-{{section.id }}{% endcapture %}
+
+        <div class="modal__overlay quicklook" id="{{ sectionkey }}" data-video-looping="{{ settings.enable_video_looping }}">
+          <section class="modal__outer">
+            {%- include 'product-quick-view', sectionkey: sectionkey -%}
+          </section>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": {{ article.content | strip_html | json }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: page.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if settings.social_home_image %}
+      {% assign image_size = settings.social_home_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ settings.social_home_image.height | json }},
+        "url": {{ settings.social_home_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ settings.social_home_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>

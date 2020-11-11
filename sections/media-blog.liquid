@@ -1,0 +1,282 @@
+<!-- /sections/media-blog.liquid -->
+
+{% assign showRSS = section.settings.show_rss %}
+{% assign showAuthor = section.settings.show_author %}
+{% assign showDate = section.settings.show_date %}
+{% assign showButton = section.settings.show_button %}
+{% assign showTags = section.settings.show_tags %}
+{% assign showComments = section.settings.show_comments %}
+{% assign showHero = section.settings.show_hero %}
+{%- assign media_tags = "PODCASTS & RADIO LIBRARY,Print Library,Webinar Library" | split: ',' -%}
+
+
+
+{% if showHero %}
+<section class="gdc-hero-image">
+	<img src="{{ section.settings.hero_image | img_url: '1024x' }}" />
+</section>
+{% endif %}
+
+<section class="blog-page" data-section-id="{{ section.id }}" data-section-type="blog-template">
+
+	{% include 'blog-title-search' %}
+
+	{% if section.blocks.size > 0 %}
+	<div class="blog-editorial" style="background-color: {{section.settings.section_bg}};">
+		<div class="editorial__slider editorial__slider--{{ section.id }}">
+			{% for block in section.blocks %}
+				{%- assign article = articles[block.settings.featured_post] -%}
+				<div class="editorial__slide editorial__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+					<div class="editorial">
+						<div class="editorial__content">
+							<p class="editorial__subheading caps">{{ block.settings.subheading }}</p>
+							<h2 class="editorial__title"><a href="{{ article.url }}" title="{{ article.title | escape }}">{{ article.title | default: blog.title }}</a></h2>
+							{% if showDate or showAuthor %}
+								<h3 class="editorial__meta">
+                                  {% if showDate %}
+                                  {% assign published_at = article.published_at | default: 'now' | date: format: 'full_date' %}
+                                  <time datetime="{{ published_at }}">{{ published_at }} &nbsp; </time>
+                                  {% endif %}
+                                  {% if showAuthor %}
+                                  {% assign article_author = article.author | default: 'Jane Doe' %}
+                                  <span>{{ 'blogs.article.by_author' | t: author: article_author }} </span>
+                                  {% endif %}
+								</h3>
+							{% endif %}
+							<div class="editorial__excerpt">
+								<p>{{ article.excerpt_or_content | strip_html | truncatewords: 30 }}</p>
+							</div>
+							{% if showButton %}
+								<p class="article__link"><a href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a></p>
+							{% endif %}
+	
+						</div>
+						{%- if article != blank and article.image -%}
+							{%- assign img_object = article.image -%}
+							{%- assign img_small = article.image | img_url: '18x' -%}
+							{%- assign img_api = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+						{%- else -%}
+							{%- assign img_object = 'blank.svg' | asset_url -%}
+							{%- assign img_small =  'blank.svg' | asset_url -%}
+							{%- assign img_api = 'blank.svg' | asset_url -%}
+						{%- endif -%}
+						{%- if block.settings.image -%}
+							{%- assign img_object = block.settings.image -%}
+							{%- assign img_small = block.settings.image | img_url: '18x' -%}
+							{%- assign img_api = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+						{%- endif -%}
+						<div class="editorial__image">
+							<div class="editorial__image-bg lazyload" data-bgset="{% include 'bgset', image: img_object %}"></div>
+							<noscript>
+								<div class="editorial__image-bg no-js-image" style="background-image: url( {{ img_object | img_url: '1024x' }} )"></div>
+							</noscript>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+	
+	{% for tag in media_tags %}
+		{% assign index = forloop.index  %}	
+				<div class="media-blog-title__wrapper">
+					<h2 class="media-blog-title">{{ tag }}</h2>
+					<div class="media-blog-arrows">
+						<a id="js-media-blog__btn--back-{{ index }}" 
+                           class="media-blog-btn" 
+                           onclick="handleScrollButtonClick('left', {{index}})"  
+                           aria-label="Click to scroll blog postings right."><</a>
+						<a id="js-media-blog__btn--forward-{{ index }}" 
+                           class="media-blog-btn" 
+                           onclick="handleScrollButtonClick('right', {{index}})" 
+                           aria-label="Click to scroll blog postings left.">></a>
+					</div>
+				</div>
+				<div class="blog-listing media-blog-listing js-media-blog__listing-{{ forloop.index }}" id="MediaBlogLoop">		
+                  {% paginate blog.articles by 200 %}
+					{% for article in blog.articles %}
+					{% if article.tags contains tag %}
+						<article class="article article-grid-item media-article-grid-item ">
+                          {% if article.image %}
+                          <a href="{{ article.url }}" aria-label="{{ article.title | escape }}">
+                          	<img src="{{ article.image.src | img_url: '500x' }}" class="media-article-image">
+                          </a>                          
+                          {% else %}
+                          <img src="https://images.unsplash.com/photo-1575483874270-11866fadb163?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2934&q=80" class="media-article-image">
+                            {% endif %}
+							<h2 class="article__title">
+								<a href="{{ article.url }}" title="{{ article.title | escape }}">{{ article.title }}</a>
+							</h2>
+	
+							<p class="article__excerpt">{{ article.excerpt_or_content | strip_html  | truncatewords: 30 }}</p>
+	
+							{% if showButton %}
+								<p class="article__link"><a href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a></p>
+							{% endif %}
+	
+						</article>
+					{% endif %}
+					{% endfor %}
+                  {% endpaginate %}
+				</div>	
+	{% endfor %}  
+</section>
+  
+{% schema %}
+  {
+    "name": "Blog pages",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_rss",
+        "label": "Show RSS icon",
+        "default": false
+			},
+      {
+        "type": "checkbox",
+        "id": "show_hero",
+        "label": "Show hero image",
+        "default": false
+			},
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Select hero image"
+      },
+      {
+        "type": "header",
+        "content": "Articles"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_author",
+        "label": "Show author",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_date",
+        "label": "Show date",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_button",
+        "label": "Show 'Read more' button",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_comments",
+        "label": "Show comment count",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_tags",
+        "label": "Show tags",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "featured_post",
+        "name": "Featured post",
+        "settings": [
+          {
+            "type": "article",
+            "id": "featured_post",
+            "label": "Featured post",
+            "info": "Feature a popular post at the top of the blog"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Featured post"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Optional: replace the article featured image."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+	const handleScrollButtonClick = (direction, index) => {
+		const scrollSelector = `.js-media-blog__listing-${ index }`;
+		const element = document.querySelector(scrollSelector);
+		const speed = 25;
+		const distance = 900;
+		const step = 20;
+		let scrollAmount = 0;
+
+		const slideTimer = setInterval(function(){
+			if(direction == 'left'){
+					element.scrollLeft -= step;
+			} else {
+					element.scrollLeft += step;
+			}
+			scrollAmount += step;
+			if(scrollAmount >= distance){
+					window.clearInterval(slideTimer);
+			}
+		}, speed);
+}
+</script>
+  
+  
+<script>
+theme.Blog = (function () {
+    function Blog(container) {
+        var self = this;
+        var $container = (this.$container = $(container));
+        var id = (this.id = $container.attr("data-section-id"));
+        var isBlogSection = $container.hasClass("blog-section");
+
+        this.enableEndlessScroll = $("body").data("endless-scroll");
+        this.truncateAll($container, isBlogSection);
+        this.checkMobile();
+
+        if (this.enableEndlessScroll) {
+            this.endlessScroll();
+        }
+
+        $(window).on(
+            "resize",
+            $.debounce(100, function () {
+                self.truncateAll($container, isBlogSection);
+                self.checkMobile();
+            })
+        );
+    }
+
+    Blog.prototype = $.extend({}, Blog.prototype, {
+        endlessScroll: function () {
+            // Initialize infinity scroll
+            var BlogLoop = "#MediaBlogLoop";
+            var MediaBlogPagination = "#MediaBlogPagination";
+            var endlessScroll = new Ajaxinate({
+                container: MediaBlogLoop,
+                pagination: MediaBlogPagination,
+                callback: function (data) {
+                    // Trigger scroll in order to fade in the new loaded elements
+                    $(window).trigger("scroll");
+                },
+            });
+        }
+    });
+
+    return Blog;
+})();  
+</script>

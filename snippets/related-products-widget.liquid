@@ -1,0 +1,12 @@
+<!-- snippets/related-products-widget.liquid -->
+
+{% if section.settings.sidebar_products and related_products.size > 0 %}
+<div class="hr"></div>
+<h3 class="widget__title">{{ 'blogs.article.related_products' | t }}</h3>
+<div class="gdc-related-products">
+  {% for handle in related_products %}
+    {%- assign product = all_products[handle] -%}
+    {% include 'product-column-item-gdc' %}
+  {% endfor %}
+</div>
+{% endif %}

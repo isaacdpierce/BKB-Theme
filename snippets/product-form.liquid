@@ -1,0 +1,145 @@
+<!-- /snippets/product-form.liquid -->
+
+{% assign button_text = 'products.product.add_to_cart' | t %}
+{% if product.tags contains '_preorder' %}
+ {% assign button_text =  'products.product.pre_order' | t %}
+{% endif %}
+{% assign enable_swatches = settings.color_swatches %}
+{% assign enable_variant_lines = settings.variant_lines %}
+
+ {% form 'product', product, class: 'product-form', data-swatches: enable_swatches %}
+
+  {% unless product.has_only_default_variant %}
+    <div class="product__selectors swatch--{{ product.id }}">
+
+      {%- if enable_variant_lines -%}
+        {%- include 'product-variants' -%}
+      {%- else -%}
+        {% for option in product.options_with_values %}
+          {%- if enable_swatches -%}
+            {%- assign downcased_option = option.name | downcase -%}
+            {%- if downcased_option contains 'color' or downcased_option contains 'colour' -%}
+              {%- include 'product-option--color-swatch' -%}
+            {%- else -%}
+              {%- include 'product-option' -%}
+            {%- endif -%}
+          {%- else -%}
+            {%- include 'product-option' -%}
+          {%- endif -%}
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endunless %}
+
+  <select name="id" class="no-js" data-product-select>
+    {% for variant in product.variants %}
+      <option
+        {% if variant == current_variant %}selected="selected"{% endif %}
+        {% unless variant.available %}disabled="disabled"{% endunless %}
+        value="{{ variant.id }}">
+          {{ variant.title }}
+      </option>
+    {% endfor %}
+  </select>   
+
+	{% if product.type == "EBook" %}
+		{% assign amazon_link = '' %}
+		{% for tag in product.tags %}
+			{% if tag contains 'https://www.amazon.com' %}
+				{% assign amazon_link = tag %}
+			{% endif %}
+		{% endfor %}
+		<a href={{ amazon_link }} 
+           class="btn btn--primary" 
+           style="margin-bottom: 30px" 
+           target="_blank" 
+           aria-label="Click to buy on Amazon.">
+          Buy Ebook
+		</a>
+	{% else %}
+	<div class="js-qty quantity-selector">      
+    <label for="Quantity" class="label-hidden">{{ 'products.product.quantity' | t }}</label>
+      <div>
+  <!--       <span class="js-qty__adjust js-qty__adjust--minus quantity__minus" tabindex="0">{% include "icon-minus" %}</span> -->
+        <input type="text" class="js-qty__num quantity__input" value="0" min="1" aria-label="quantity" pattern="[0-9]*" autocomplete="off" name="quantity">
+  <!--       <span class="js-qty__adjust js-qty__adjust--plus quantity__plus" tabindex="0">{% include "icon-plus" %}</span> -->
+      </div>
+  	</div>
+
+	<div class="product__submit {% if buybutton_setting %}product__submit--spb{% endif %}" data-product-id="{{product.id}}">
+    <div class="product__submit__buttons">
+      <button
+        type="submit"
+        name="add"
+        class="btn add-js product__submit__add"
+        data-add-to-cart
+        {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+        <span data-add-to-cart-text>
+          {% if current_variant.available %}
+            {{ button_text }}
+          {% else %}
+            {{ 'products.product.sold_out' | t }}
+          {% endif %}
+        </span>
+      </button>
+
+      {% if buybutton_setting %}
+        {{ form | payment_button }}
+      {% endif %}
+    </div>
+  
+    <div id="CartPopoverCont" class="cart-popover"></div>
+
+    <script id="CartPopover" type="text/x-handlebars-template">
+      <a href="#" class="close">{% include 'icon-close-thin' %}</a>
+      <div class="product__add__notification">
+        <div class="product__add__success">
+          <div class="product__add__success__image">
+            {% capture product_image %}{% raw %}{{ image }}{% endraw %}{% endcapture %}
+            <div class="product__add__success__image-bg lazyload"
+              data-bgset="{% include 'bgset', image: product_image %}"
+              data-sizes="auto"
+              data-parent-fit="cover">
+            </div>
+          </div>
+          <div class="product__add__success__content">
+            <h6>{{ 'products.product.added' | t }}</h6>
+            {% raw %}
+            <h3 class="product__title">{{ item_count }} {{ product_title }}</h3>
+            <p class="product__variant">{{ variant }}</p>
+            <p class="product__price">{{{ price_formatted }}}</p>
+            {% endraw %}
+            <div class="buttons-wrap">
+              <a href="/checkout" class="btn btn--primary">{{ "cart_popover.checkout" | t }}</a>
+              <a href="{{ routes.cart_url }}" class="btn btn--secondary">{{ "cart_popover.view_cart" | t }}</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </script>
+
+  </div>
+
+
+	{% endif %}
+	
+
+
+{% endform %}
+
+<script>
+  $(window).load(function() {
+
+    // Allows enough time for the Bold QB grid to load on the product form before we try to move it.
+    setTimeout(function(){
+      var boldQbGrid = $('.shappify_qb_grid')[0];
+      var destinationDiv = $('.medium-up--one-half')[0]
+      
+      $(destinationDiv).append(boldQbGrid);
+    }, 950);
+
+  });
+</script>
+
+

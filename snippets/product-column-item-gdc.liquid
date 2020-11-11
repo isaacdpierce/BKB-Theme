@@ -1,0 +1,7 @@
+<!-- /snippets/product-column-item-gdc.liquid -->
+
+<a href="{{ product.url }}" class="gdc-product-column">
+  {% if product.featured_media %}
+      <div class="gdc-product__column__image lazyload"  data-bgset="{% include 'bgset', image: product.featured_media.preview_image %}"></div>
+  {% endif %}
+</a>

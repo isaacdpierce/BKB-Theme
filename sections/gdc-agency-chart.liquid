@@ -1,0 +1,82 @@
+<div class="collection__title collection__title--no-image">
+
+<h1 class="hero__title">{{ collection.title }}</h1>
+  {%- if collection.description != '' -%}
+    <div class="hero__description rte">{{ collection.description }}</div>
+  {%- endif -%}
+
+  <div class="discounts-wrapper" style="display: flex; flex-wrap: wrap;">   
+   		{% include 'gdc-discounts-booklet' %}
+        {% include 'gdc-discounts-dvd' %}
+        {% include 'gdc-discounts-bundles' %}
+  </div>
+
+  
+  <div class="gdc-agency-buttons-wrapper">
+    <div class="agency-product-grid__btn">
+      <a 
+      class="btn btn--large btn--full" 
+      href="{{ section.settings.button_1_url }}"
+      title="Order Form" 
+      data-mce-fragment="1" 
+      data-mce-href="{{ section.settings.button_1_url }}" 
+      target="_blank">
+      {{ section.settings.button_1_text }}
+      </a>
+    </div>
+    <div class="agency-product-grid__btn">
+      <a 
+      class="btn btn--large btn--full" 
+      href="{{ section.settings.button_2_url }}"
+      title="Order Form" 
+      data-mce-fragment="1" 
+      data-mce-href="{{ section.settings.button_2_url }}" 
+      target="_blank">
+      {{ section.settings.button_2_text }}
+      </a>
+    </div>
+   </div>
+</div>
+
+
+{% schema %} 
+  {
+    "name": "Chart Settings",   
+    "settings": [
+      {
+        "id": "button_1_url",
+        "type": "text",
+        "label": "Button one URL" 
+      },  
+      {
+        "id": "button_1_text",
+        "type": "text",
+        "label": "Button one text" 
+      },
+      {
+        "id": "button_2_url",
+        "type": "text",
+        "label": "Button two URL" 
+      },  
+      {
+        "id": "button_2_text",
+        "type": "text",
+        "label": "Button two text"    
+      }
+    ]
+  }
+{% endschema %}
+
+{% javascript %}
+
+const showChart = (event) => {
+	const chart = event.target.nextElementSibling;       
+	console.log("Chart element = ", chart);
+	chart.classList.toggle('gdc-hidden-chart');   
+}
+
+const buttons = document.querySelectorAll(".js-show-discounts");
+
+buttons.forEach(button => button.addEventListener('click', showChart));
+
+{% endjavascript %}

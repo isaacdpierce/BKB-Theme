@@ -1,0 +1,130 @@
+<!-- /templates/search.liquid -->
+{% assign type = search.types.first %}
+
+<section class="page search-page">
+  <h2 class="theme">Search more {% if type == "product" %} products {% elsif type == "article" %} articles {% endif %} on our site.</h2>
+  {% if search.performed %}
+		{% paginate search.results by 24 %}
+			{% if search.results == empty %}
+			
+        <div class="search-outer">			
+          <form action="{{ routes.search_url }}" class="search-form">
+            <input type="hidden" name="type" value="product"/>
+            <input
+              type="text"
+              name="q"
+              class="search-box"
+              placeholder="{{ 'general.search.title' | t }}"
+              aria-label="{{ 'general.search.placeholder' | t }}"
+              value="{{ search.terms }}"/>
+						<button type="submit" class="btn search-submit">{{ 'general.search.submit' | t }}</button>
+          </form>
+					<div class="search-results-text center">
+						<p>{{ 'general.search.no_results_html' | t: terms: search.terms | escape }}</p>
+					</div>
+				</div>		
+			{% else %}			
+      <div class="search-outer">
+        <form action="{{ routes.search_url }}" class="search-form">
+          <input type="hidden" name="type" value="{% if type == "product" %} product {% elsif type == "article" %} article {% endif %}"/>
+          <input
+          type="text"
+          name="q"
+          class="search-box"
+          aria-label="{{ 'general.search.placeholder' | t }}"
+          placeholder="{{ 'general.search.title' | t }}"
+          value="{{ search.terms }}"/>
+          <button type="submit" class="btn search-submit">{{ 'general.search.submit' | t }}</button>
+        </form>
+				<div class="search-results-text theme gutter-bottom">
+					<p>{{ 'general.search.results_for_html' | t: terms: search.terms | escape }}</p>
+				</div>
+      </div>
+
+
+			{% case type %}
+
+			{% when 'product' %}
+
+      <div class="product-grid product-grid--search" id="SearchLoop">
+				{% for product in search.results %}
+        <script type="application/json" class="bold-product-json">{{ product | json }}</script>
+
+					{% include 'product-grid-item', quick_view: false %}
+				{% endfor %}
+			</div>
+
+			{% when 'article' %}
+			
+		<div class="gdc-blog-listing">
+			<div class="blog-listing grid grid--uniform" id="BlogLoop">
+        {% for article in search.results %}
+          <article class="article article-grid-item grid__item small--one-whole medium--one-third large-up--one-third">
+{% comment%}
+            {% if article.image %}
+              <a href="{{ article.url }}">
+                {% assign image = article.image %}
+                {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                <div class="lazy-image article__image" style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%; background-image:  url('{{ image.src | img_url: '1x1' }}');">
+                  <img class="lazyload fade-in"
+                  src="{{ image | img_url: '540x' }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                  data-aspectratio="{{ image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ image.alt | default: article.title }}">
+                    <noscript>
+                      <img class="article__image" src="{{ image | img_url: '540x' }}" alt="{{ image.alt | default: article.title }}"/>
+                    </noscript>
+                </div>
+              </a>
+            {% endif %}
+{% endcomment%}
+            <h2 class="article__title"><a href="{{ article.url }}" title="{{ article.title | escape }}">{{ article.title }}</a></h2>
+						<h3 class="article__meta">
+								{% assign published_at = article.published_at | date: format: 'full_date' %}
+								<time datetime="{{ published_at }}">{{ published_at }}</time>
+								<span>{{ 'blogs.article.by_author' | t: author: article.author }} </span>
+						</h3>
+      
+            <p class="article__excerpt">{{ article.excerpt_or_content | strip_html  | truncatewords: 30 }}</p>
+  
+            <p class="article__link"><a href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a></p>
+  
+
+          </article>
+        {% endfor %}
+			</div>
+		</div>
+
+			{% endcase %}				
+
+      {% endif %}
+
+      {% if settings.endless_scroll %}
+        <div class="pagination" id="SearchPagination">
+          {% if paginate.next %}
+            <a href="{{ paginate.next.url }}" class="loadMore js-loadMore"></a>
+          {% endif %}
+        </div>
+      {% else %}
+        {% include 'pagination' %}
+      {% endif %}
+
+    {% endpaginate %}
+  {% else %}
+  	<div class="search-outer">
+      <form action="{{ routes.search_url }}" class="search-form">
+          <input type="hidden" name="type" value="product"/>
+          <input
+            type="text"
+            name="q"
+            class="search-box"
+            aria-label="{{ 'general.search.placeholder' | t }}"
+            placeholder="{{ 'general.search.title' | t }}"
+            value="{{ search.terms }}"/>
+          <button type="submit" class="btn search-submit">{{ 'general.search.submit' | t }}</button>
+      </form>
+    </div>
+  {% endif %}
+</section>

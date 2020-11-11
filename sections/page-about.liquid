@@ -1,0 +1,113 @@
+<div class="gdc-about">
+  <div class="gdc-about-content">
+    {% if section.settings.image_1 != blank %}
+      <div class="gdc-about-content__image-1">
+		{{ section.settings.image_1 | img_url: '1000x', scale: 2 | img_tag }}
+      </div>
+    {% endif %}
+    
+    {% if section.settings.text_1 != blank %}
+      <div class="gdc-about-content__text-1">
+		{{ section.settings.text_1 }}
+      </div>
+    {% endif %}
+    
+    {% if section.settings.text_2 != blank %}
+      <div class="gdc-about-content__text-2">
+		{{ section.settings.text_2 }}
+      </div>
+    {% endif %}
+    
+    {% if section.settings.image_2 != blank %}
+      <div class="gdc-about-content__image-2">
+		{{ section.settings.image_2 | img_url: '1000x', scale: 2 | img_tag }}
+      </div>
+    {% endif %}
+  </div>
+  
+  {% if section.blocks.size > 0 %}
+    <div class="gdc-about-team">
+      {% if section.settings.team_heading != blank %}
+        <div class="gdc-about-team__heading">
+          <h3>{{ section.settings.team_heading }}</h3>
+        </div>
+      {% endif %}
+      
+      {% for block in section.blocks %}
+		<div class="gdc-about-team-member">
+		  <div class="gdc-about-team-member__image">
+            {{ block.settings.image | img_url: '400x', scale: 2 | img_tag }}
+          </div>
+          
+          <div class="gdc-about-team-member__name">
+            {{ block.settings.name }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "About",
+    "settings": [
+	  {
+		"type": "header",
+		"content": "Content"
+	  },
+	  {
+		"type": "image_picker",
+		"id": "image_1",
+		"label": "Image 1"
+	  },
+	  {
+		"type": "image_picker",
+		"id": "image_2",
+		"label": "Image 2"
+	  },
+	  {
+		"type": "richtext",
+		"id": "text_1",
+		"label": "Text 1"
+	  },
+	  {
+		"type": "richtext",
+		"id": "text_2",
+		"label": "Text 2"
+	  },
+	  {
+		"type": "header",
+		"content": "Team"
+	  },
+	  {
+		"type": "text",
+		"id": "team_heading",
+		"label": "heading",
+		"default": "Our Team"
+	  },
+	  {
+		"type": "paragraph",
+		"content": "Add blocks below to populate your team members"
+	  }
+	],
+	"blocks": [
+	  {
+		"type": "team_member",
+		"name": "Team Member",
+		"settings": [
+		  {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		  },
+		  {
+			"type": "text",
+			"id": "name",
+			"label": "Name"
+		  }
+		]
+	  }
+	]
+  }
+{% endschema %}

@@ -1,0 +1,42 @@
+<div class="gdc-contact">
+
+	<div class="gdc-media-contact__form">
+	{% form 'contact' %}
+
+		{% if form.posted_successfully? %}
+			<p class="form-success">
+				{{ 'contact.form.post_success' | t }}
+			</p>
+		{% endif %}
+
+		{{ form.errors | default_errors }}
+
+		<div class="custom-form__block form-field">
+			<label  for="Form-{{ section.id }}-{{ forloop.index0 }}" class="label--hidden">Name</label>
+			<input type="text" class="contactFormText" id="Form-{{ section.id }}-{{ forloop.index0 }}" name="contact[name]" placeholder="Name" autocapitalize="words" value="" required />
+		</div>
+
+		<div class="custom-form__block form-field">
+			<label for="Form-{{ section.id }}-{{ forloop.index0 }}">Email</label>
+			<input type="email" class="contactFormEmail" id="Form-{{ section.id }}-{{ forloop.index0 }}" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" required />
+		</div>
+
+		<div class="custom-form__block form-field">
+			<label for="Form-{{ section.id }}-{{ forloop.index0 }}">Message</label>
+			<textarea rows="10" id="Form-{{ section.id }}-{{ forloop.index0 }}" class="contactFormMessage" name="contact[message]" placeholder="Message" required></textarea>
+		</div>
+
+		<div class="custom-form__block form-field">
+			<label for="Form-{{ section.id }}-{{ forloop.index0 }}">Phone number</label>
+			<input type="tel" id="Form-{{ section.id }}-{{ forloop.index0 }}" class="contactFormPhone" name="contact[telephone]" placeholder="Phone number" value="" />
+		</div>
+
+		<input type="hidden" id="contactFormSource" name="contact[source]" value="Branding Page">
+
+		<div class="form-item">
+		<input type="submit" class="btn btn--large btn--full" value="{{ 'contact.form.send' | t }}">
+		</div>
+		
+	{% endform %}
+	</div>
+</div>

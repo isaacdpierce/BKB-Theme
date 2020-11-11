@@ -1,0 +1,85 @@
+<!-- /snippets/bought-together.liquid -->
+
+{% assign bundle = product.tags | where: "bundle" | first %}
+{% assign products = collections.all.products %}
+{% assign priceTotal = 0 %}
+
+{% if bundle %}
+<div class="bought-together">
+	<h4>Frequently bought together:</h4>
+	<form  id="bought-together-add" action="/cart/update" method="post" enctype="multipart/form-data">    
+		<div class="bought-together__grid">
+			{% for product in products %}
+			{% if product.tags contains bundle %}
+
+				{% assign variant = product.variants.first %}
+				{% assign variant_item = cart.items | where: 'variant_id', variant.id | first %}	
+				{% assign priceTotal = priceTotal | plus: product.price_max %} 
+
+				<div class="bought-together__title">
+					<input 
+						class="bought-together__check-box" 
+						type="checkbox" 
+						name="updates[{{ variant.id }}]"
+						id={{ product.id }} 
+						onclick="handleBoughtTogetherCheck()" 
+						value="{{ variant_item.quantity | plus: 1 }}" 
+						data-price="{{ product.price_max | money_without_currency  }}" 
+						checked>
+
+					<a href="{{ product.url }}" target="_blank">
+						{{ product.title }} | {{ product.price_max | money }}
+					</a>
+				</div>
+
+				<a class="bought-together__image" id={{ product.id }} href="{{ product.url }}" target="_blank">
+					<img src="{{ product | img_url: '150x150' }}" alt="{{ product.image.alt | default: product.title  }}">
+				</a>
+			{% endif %}
+			{% endfor %}
+
+			<div class="bought-together__price">
+				<span class="bought-together__price-total">= Total: {{ priceTotal | money }}</span>
+				<button class="btn" type="submit" name="add" id="bought-together">Add all to cart</button>
+			</div>
+		</div>
+		
+	</form> 
+</div>
+{% endif %}
+
+<script>	
+const handleBoughtTogetherCheck = (() => {
+		const getPrice = (elem) =>  parseFloat(elem.getAttribute('data-price'));
+		const setPriceFormat = (price) => `$${(price).toFixed(2)}`
+		const setDisplay = (elem, display) => elem.style.display = display;
+		const setInnerHTML = (elem, msg) => elem.innerHTML = msg;
+
+		const setUI = () => {
+			const checkBoxes = document.querySelectorAll('.bought-together__check-box');
+			const images = document.querySelectorAll('.bought-together__image');
+			let priceTotal = document.querySelector('.bought-together__price-total');
+			let total = 0;
+				
+				for (let checkBox of checkBoxes) {
+					if (checkBox.checked) {
+						total += getPrice(checkBox);				
+						for (let image of images) {
+							if (checkBox.id == image.id ) {
+								setDisplay(image, "flex")
+							}
+						}
+					} else {
+						for (let image of images) {
+							if (checkBox.id == image.id ) {
+								setDisplay(image, "none")
+							}
+						}
+					}
+					setInnerHTML(priceTotal, `= Total: ${setPriceFormat(total)}`);
+				}		  
+		};
+		return setUI;
+})();
+</script>
+

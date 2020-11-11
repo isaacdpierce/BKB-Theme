@@ -1,0 +1,1812 @@
+{
+  "current": {
+    "text_color": "#60666b",
+    "bg_color": "#ffffff",
+    "secondary_bg_color": "#f7f7f7",
+    "accent_bright": "#81b2c6",
+    "accent_secondary": "#cbc6ba",
+    "site_border_color": "#ffffff",
+    "link_color": "#2b2b2b",
+    "link_hover_color": "#81b2c6",
+    "header_bg": "#ffffff",
+    "header_link": "#2b2b2b",
+    "header_link_hover": "#81b2c6",
+    "menu_bg_color": "#ffffff",
+    "menu_border_color": "#cbc6ba",
+    "menu_link_color": "#2b2b2b",
+    "menu_link_hover_color": "#81b2c6",
+    "submenu_bg_color": "#ffffff",
+    "submenu_link_color": "#2b2b2b",
+    "submenu_link_hover_color": "#81b2c6",
+    "menu_transparent_color": "#ffffff",
+    "footer_bg": "#ffffff",
+    "footer_text": "#60666b",
+    "footer_link": "#2b2b2b",
+    "footer_link_hover": "#81b2c6",
+    "type_heading_font": "asap_n4",
+    "type_heading_size": 95,
+    "type_base_font": "asap_n4",
+    "type_body_size": 105,
+    "button_border_radius": 0,
+    "animations_enable": true,
+    "endless_scroll": true,
+    "enable_disqus": false,
+    "disqus_shortname": "",
+    "enable_product_reviews": true,
+    "enable_yotpo": false,
+    "yotpo_ID": "",
+    "instagram_link": "https:\/\/www.instagram.com\/barbarakarnesrn",
+    "facebook_link": "https:\/\/www.facebook.com\/barbarakarnesrn",
+    "linkedin_link": "https:\/\/www.linkedin.com\/in\/barbarakarnesrn\/",
+    "twitter_link": "https:\/\/twitter.com\/BarbaraKarnesRN",
+    "youtube_link": "https:\/\/www.youtube.com\/channel\/UCXVqIQdyP2OBTop8-jboRww",
+    "vimeo_link": "",
+    "pinterest_link": "",
+    "tumblr_link": "",
+    "atom_link": "",
+    "share_facebook": true,
+    "share_linkedin": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_home_image": "shopify:\/\/shop_images\/thumbnail.jpeg",
+    "color_swatches": true,
+    "variant_lines": false,
+    "image_size": "contain",
+    "image_hover_enable": false,
+    "product_grid_aspect_ratio": 1,
+    "sale_tags_enable": true,
+    "sale_background_color": "#be563f",
+    "sale_text_color": "#ffffff",
+    "quickview_enable": true,
+    "quickview_buybutton_enable": true,
+    "enable_video_looping": false,
+    "show_promo_modal": false,
+    "promo_dev_mode": false,
+    "promo_modal_subtitle": "Broadcast",
+    "promo_modal_title": "Newsletter",
+    "promo_modal_richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+    "promo_button_text": "Join",
+    "promo_image": "",
+    "promo_bg_color": "#fff",
+    "promo_text_color": "dark",
+    "favicon": "shopify:\/\/shop_images\/BK_Favicon_1.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/BKmark_no_padding.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#f7f7f7",
+    "checkout_heading_font": "Lato",
+    "checkout_body_font": "Open Sans",
+    "checkout_accent_color": "#9fa3a4",
+    "checkout_button_color": "#81b2c6",
+    "checkout_error_color": "#c85c42",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_image": "shopify:\/\/shop_images\/logo.png",
+          "logo_image_width": 330,
+          "header_style": "sticky",
+          "header_transparent_home": false,
+          "header_transparent_collection": false,
+          "show_header_social": true,
+          "show_header_search": true,
+          "show_account": true,
+          "message": true,
+          "message_text": "",
+          "message_detail": "Need some help? Call us at 360-828-7132",
+          "color_bg": "#81b2c6",
+          "color_text": "#eeeeee",
+          "menu_primary": "main-menu"
+        }
+      },
+      "product": {
+        "type": "product",
+        "blocks": {
+          "1600129670942": {
+            "type": "tab_richtext",
+            "settings": {
+              "title": "Tab",
+              "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+            }
+          },
+          "product-tab-1": {
+            "type": "tab_richtext",
+            "settings": {
+              "title": "Tab",
+              "raw_content": "<p>Tab content.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1600129670942",
+          "product-tab-1"
+        ],
+        "settings": {
+          "image_layout": "thumbnails",
+          "hide_thumbnails": true,
+          "product_sticky_enable": true,
+          "show_breadcrumbs": true,
+          "show_share_buttons": true,
+          "product_show_vendor": false,
+          "show_payment_button": true,
+          "show_cart_bar": false,
+          "cart_bar_position": "bottom",
+          "tabs_enable": false,
+          "enable_video_looping": false
+        }
+      },
+      "page-contact": {
+        "type": "page-contact",
+        "blocks": {
+          "contact-1": {
+            "type": "text",
+            "settings": {
+              "title": "Full Name"
+            }
+          },
+          "contact-2": {
+            "type": "email",
+            "settings": {
+              "title": "Email"
+            }
+          },
+          "contact-3": {
+            "type": "body",
+            "settings": {
+              "title": "Message"
+            }
+          },
+          "contact-4": {
+            "type": "spacer",
+            "settings": {
+              "line": false
+            }
+          },
+          "contact-5": {
+            "type": "formHeading",
+            "settings": {
+              "title": "Optional:"
+            }
+          },
+          "contact-6": {
+            "type": "checkbox",
+            "settings": {
+              "title": "Subscribe to the newsletter"
+            }
+          },
+          "contact-7": {
+            "type": "select",
+            "settings": {
+              "title": "How did you hear about us:",
+              "label-one": "- Pick an option -",
+              "label-two": "Instagram \/ Facebook",
+              "label-three": "Web search",
+              "label-four": "Print Ad",
+              "label-five": "From a friend",
+              "label-six": "Other"
+            }
+          }
+        },
+        "block_order": [
+          "contact-1",
+          "contact-2",
+          "contact-3",
+          "contact-4",
+          "contact-5",
+          "contact-6",
+          "contact-7"
+        ],
+        "settings": {
+          "show_hero": true,
+          "hero_image": "shopify:\/\/shop_images\/9whOJn3g.jpeg",
+          "image": "shopify:\/\/shop_images\/Hospice_Pioneer_Barbara_Karnes_RN.jpeg",
+          "text": "",
+          "title": ""
+        }
+      },
+      "index-blog": {
+        "type": "index-blog",
+        "settings": {
+          "blog_name": "something-to-think-about",
+          "title": "Blog posts",
+          "blog_text": "",
+          "grid": 4,
+          "rows": 1,
+          "show_author": false,
+          "show_date": false,
+          "show_button": true,
+          "show_tags": false,
+          "overlay_opacity": 15,
+          "overlay_color": "#5e6365"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1595616380533": {
+            "type": "social",
+            "settings": {
+              "title": "Connect with us",
+              "richtext": "<p>BARBARA KARNES BOOKS<br\/>PO Box 822139<br\/>Vancouver, WA 98682<br\/>Tel 360.828.7132<\/p>"
+            }
+          },
+          "1595617080089": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "footer"
+            }
+          },
+          "1595617027964": {
+            "type": "newsletter",
+            "settings": {
+              "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1595616380533",
+          "1595617080089",
+          "1595617027964"
+        ],
+        "settings": {
+          "footer_logo": "shopify:\/\/shop_images\/BKmark_no_padding.png",
+          "logo_image_width": 100,
+          "overlay_opacity": 15,
+          "overlay_color": "#5e6365",
+          "footer_secondary_linklist": "",
+          "footer_payment_enable": false,
+          "show_locale_selector": false,
+          "show_currency_selector": false
+        }
+      },
+      "1595616909407": {
+        "type": "index-products",
+        "settings": {
+          "featured_collection": "frontpage",
+          "title": "",
+          "grid": 5,
+          "rows": 1,
+          "enable_reviews": false,
+          "scroll": "horizontally",
+          "arrows_style": "dark"
+        }
+      },
+      "1595625357893": {
+        "type": "split-hero",
+        "disabled": true,
+        "settings": {
+          "image_height": "screen-height-full",
+          "mobile_layout": "stacked",
+          "image_desktop_left": "shopify:\/\/shop_images\/CKS-156-3211798745-O-3367747799-O.jpg",
+          "image_desktop_right": "shopify:\/\/shop_images\/KS-116-3211815385-O-3367764830-O.jpg",
+          "title": "Split images",
+          "description": "Tell your brand's story through images.",
+          "flex_align": "align--bottom-center",
+          "text_color": "text-light",
+          "transparent": true,
+          "link_text": "View products",
+          "overlay_color": "#ffffff",
+          "overlay_opacity": 0
+        }
+      },
+      "1595625870894": {
+        "type": "index-product",
+        "disabled": true,
+        "settings": {
+          "home_product": "gone-from-my-sight-the-dying-experience",
+          "show_share_buttons": true,
+          "product_show_vendor": false,
+          "show_payment_button": false,
+          "tabs_enable": false,
+          "enable_video_looping": false
+        }
+      },
+      "1595625957717": {
+        "type": "index-hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/large_horizontal_BK.jpeg",
+          "parallax": false,
+          "height": "screen-height-two-thirds",
+          "overlay_opacity": 15,
+          "overlay_color": "#ffffff",
+          "title": "",
+          "description": "“People don’t understand that there’s a normal, natural way of dying. My materials are written to guide and support anyone who finds themselves addressing end of life situations. The goal is to help people have a positive experience so families will have a sacred memory to carry with them.” - Barbara Karnes, RN",
+          "flex_align": "align--middle-right",
+          "text_color": "text-light",
+          "transparent": true,
+          "link_text": ""
+        }
+      },
+      "1595625975995": {
+        "type": "index-video",
+        "settings": {
+          "title": "New Rules for End of Life Care Trailer",
+          "content": "",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=oP9gp9-G9cM",
+          "logo_max_width": 100,
+          "image": "shopify:\/\/shop_images\/custom_resized_b440726c-857b-4546-8073-022b8d3dcca3.jpg",
+          "height": "screen-height-full",
+          "text_color": "text-light",
+          "overlay_opacity": 15,
+          "overlay_color": "#5e6365"
+        }
+      },
+      "related": {
+        "type": "related",
+        "settings": {
+          "related_products_enable": true,
+          "limit": 4,
+          "product_recommendations_heading": "Related products",
+          "show_recently_viewed": true,
+          "product_recently_limit": 4,
+          "product_recently_heading": "Recently viewed"
+        }
+      },
+      "page-faq": {
+        "type": "page-faq",
+        "blocks": {
+          "1601577257411": {
+            "type": "heading",
+            "settings": {
+              "heading": "General Questions"
+            }
+          },
+          "1598489117318": {
+            "type": "question",
+            "settings": {
+              "question": "I need your materials ASAP, what should I do?",
+              "answer": "<p>Option 1: USPS Priority Mail rates are available upon request. Please allow 2-3 business days for delivery. <\/p><p>Option 2: Electronic versions of our materials are available for purchase. They can be viewed on any smartphone or computer. <\/p>"
+            }
+          },
+          "1601577324690": {
+            "type": "question",
+            "settings": {
+              "question": "Can I make copies of your booklet to share?",
+              "answer": "<p>No, all of our publications are copyright protected.<\/p>"
+            }
+          },
+          "1601577364171": {
+            "type": "question",
+            "settings": {
+              "question": "Are you registered with SAM?",
+              "answer": "<p>Yes, B. Karnes Books is registered with the Official Government System, SAM. Please call or email us for our DUNS number and CAGE code.<\/p>"
+            }
+          },
+          "1601577424655": {
+            "type": "question",
+            "settings": {
+              "question": "Do you offer your booklets in a printable pdf file?",
+              "answer": "<p>No, we do not offer a printable pdf of any of our publications.<\/p>"
+            }
+          },
+          "1601577459202": {
+            "type": "question",
+            "settings": {
+              "question": "I’d like to share the poem Gone From My Sight at a memorial service. Is the poem copyrighted?",
+              "answer": "<p>Henry Van Dyke’s poem, <em>Gone From My Sight <\/em>(included in our booklet of the same name), is part of public domain. You can download a printable pdf of the <a title=\"Gone From My Sight Poem\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0438\/1995\/8428\/files\/Gone_From_My_Sight_Poem.pdf?v=1603241566\" target=\"_blank\">poem here<\/a>.<\/p>"
+            }
+          },
+          "1598489111789": {
+            "type": "heading",
+            "settings": {
+              "heading": "Shipping Questions"
+            }
+          },
+          "1598489131361": {
+            "type": "question",
+            "settings": {
+              "question": "When will I receive my order?",
+              "answer": "<p>We ship all orders USPS Media Mail and allow for 7-10 business days for our materials to arrive. We realize that our materials can be time sensitive and USPS Priority Mail (2-3 business days) shipping is available. Please select the USPS Priority Mail shipping method at checkout.<\/p>"
+            }
+          },
+          "1601577183851": {
+            "type": "question",
+            "settings": {
+              "question": "Do you ship your booklets Internationally?",
+              "answer": "<p>Yes we do! Please send an email to us that includes your delivery address and the list of products you are interested in ordering. We’ll get back to you with a shipping quote.<\/p>"
+            }
+          },
+          "1601577239079": {
+            "type": "question",
+            "settings": {
+              "question": "I would like to send booklets to a friend, is this possible?",
+              "answer": "<p>Yes. Please let us know that your order is a gift in the space given at checkout and include a short message to the recipient. We will include a handwritten note with the order.<\/p>"
+            }
+          },
+          "1601577400073": {
+            "type": "question",
+            "settings": {
+              "question": "Can I mix and match booklets to get the quantity discount?",
+              "answer": "<p>No, quantity discounts are applied to each individual booklet ordered. For cross booklet discounts <a title=\"https:\/\/bkbooks.com\/collections\/all-products\/products\/end-of-life-guideline-series-a-compilation-of-barbara-karnes-booklets\" href=\"https:\/\/bkbooks.com\/collections\/all-products\/products\/end-of-life-guideline-series-a-compilation-of-barbara-karnes-booklets\">see The End of Life Guideline Series<\/a>. <\/p><p><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1601577257411",
+          "1598489117318",
+          "1601577324690",
+          "1601577364171",
+          "1601577424655",
+          "1601577459202",
+          "1598489111789",
+          "1598489131361",
+          "1601577183851",
+          "1601577239079",
+          "1601577400073"
+        ],
+        "settings": {}
+      },
+      "blog": {
+        "type": "blog",
+        "settings": {
+          "show_tag_nav": false,
+          "show_rss": false,
+          "grid": 3,
+          "rows": 4,
+          "show_hero": true,
+          "hero_image": "shopify:\/\/shop_images\/KS-116-3211815385-O-3367764830-O.jpg",
+          "show_author": false,
+          "show_date": false,
+          "show_button": true,
+          "show_comments": false,
+          "show_tags": false
+        }
+      },
+      "blog-newsletter": {
+        "type": "blog-newsletter",
+        "settings": {
+          "title": "Newsletter",
+          "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
+          "width": "full",
+          "flex_align": "align--middle-center",
+          "text_color": "dark",
+          "height": "screen-height-one-third",
+          "bg_image": "",
+          "overlay_opacity": 0,
+          "overlay_color": "#fff"
+        }
+      },
+      "article": {
+        "type": "article",
+        "settings": {
+          "image_height": "screen-height-one-third",
+          "image": "shopify:\/\/shop_images\/JA-115-3277070184-O-3367760995-O.jpg",
+          "meta": true,
+          "tags": false,
+          "social": true,
+          "arrows": false,
+          "tag_nav_enable": false,
+          "blog_linklist": "",
+          "recent": true,
+          "sidebar_products": true,
+          "pinterest": false
+        }
+      },
+      "page-about": {
+        "type": "page-about",
+        "settings": {
+          "image_1": "shopify:\/\/shop_images\/BK_RN_2020.jpeg",
+          "image_2": "shopify:\/\/shop_images\/Barbara_young_nurse.JPG",
+          "text_1": "<p>While at the bedside of hundreds of people during the dying process, Hospice Pioneer Barbara Karnes noticed that each death was following a near identical script. Each person was going through the stages of death in almost the same manner and most families came to her with similar questions. These realizations led Barbara to sit down and write <a href=\"\/collections\/booklets\/products\/gone-from-my-sight-the-dying-experience?variant=35190472835228\" title=\"https:\/\/barbarakarnesbooks.myshopify.com\/collections\/booklets\/products\/gone-from-my-sight-the-dying-experience?variant=35190472835228\">Gone From My Sight<\/a>, &quot;The Little Blue Book&quot; that changed the hospice industry.  <\/p><p><a href=\"\/collections\/booklets\/products\/gone-from-my-sight-the-dying-experience?variant=35190472835228\" title=\"https:\/\/barbarakarnesbooks.myshopify.com\/collections\/booklets\/products\/gone-from-my-sight-the-dying-experience?variant=35190472835228\">Gone From My Sight<\/a> is the original, and remains the most widely used, patient\/family educational booklet on the signs of approaching death. It has been in print continuously since 1985 and has sold over thirty million copies world wide. With its publication and distribution, Barbara created one of the most important tools in the end of life movement today.  <\/p><p> <\/p><p><em>“People don’t understand that there’s a normal, natural way of dying. My materials are written to guide and support anyone who finds themselves addressing end of life situations. The goal is to help people have a positive experience so everyone involved will have a sacred memory to carry with them.” - <\/em>Barbara Karnes, RN<\/p>",
+          "text_2": "<p>Barbara Karnes, RN, is an internationally respected speaker, educator, author, and thought leader on matters of end of life. She is a renowned authority on the dying process and a leading educator for families, healthcare professionals, and the community at large.<\/p><p>Barbara&#x27;s award winning DVDs and books about death and dying are starting conversations and changing lives - in this country and around the world. In her work, Barbara compassionately explains stages of the dying process, living with a life threatening illness, pain management, and how people grieve. She explains how important it is to take care of yourself as a caregiver and offers guidelines for professionals.  <\/p><p>Barbara has held both clinical and leadership positions, including staff nurse, clinical supervisor, and executive director at Hospices and Home Health Care agencies.  <\/p><p>Since 1994, Barbara has traveled the country speaking about end of life issues and the stages of dying at national and state hospice and palliative care organization conferences, state associations, colleges, nursing schools, hospitals, and hospices. She is the expert that hospice and other healthcare professionals count on to teach them how to explain the dying process to families.<\/p><p>Barbara has dedicated the last 40 years of her life to the education, care, and support of dying people and their loved ones. The most useful and important things that she&#x27;s learned along the way have been distilled into her materials.<\/p>",
+          "team_heading": "Our Team"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "enable_sort": false,
+          "filter_mode": "tag",
+          "show_title": true,
+          "show_description": true,
+          "text_color": "text-dark",
+          "flex_align": "align--middle-left",
+          "transparent": false,
+          "show_image": true,
+          "banner_layout": "inline",
+          "height": "image-height",
+          "parallax": false,
+          "overlay_opacity": 0,
+          "overlay_color": "#000",
+          "grid": 4,
+          "enable_reviews": false,
+          "show_featured_image": false,
+          "featured_image": "",
+          "featured_heading": "Use this image showcase promotional content.",
+          "featured_text": "<p>Elaborate on it with rich text<p>",
+          "featured_button_text": "Learn More",
+          "featured_button_link": "",
+          "featured_color_text": "#ffffff",
+          "featured_color_overlay": "#222222",
+          "featured_overlay_opacity": 10
+        }
+      },
+      "1599773850599": {
+        "type": "index-products",
+        "settings": {
+          "featured_collection": "dvd",
+          "title": "",
+          "grid": 4,
+          "rows": 1,
+          "enable_reviews": false,
+          "scroll": "horizontally",
+          "arrows_style": "dark"
+        }
+      },
+      "1599773983795": {
+        "type": "index-logo-list",
+        "blocks": {
+          "1599773983795-0": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/npr_greyscale.png"
+            }
+          },
+          "1599773983795-1": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/the_globe_bw.png"
+            }
+          },
+          "1599773983795-2": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/thrive_bw.png"
+            }
+          },
+          "1599773983795-3": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Pulse_black.png"
+            }
+          },
+          "1599773983795-4": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Washington_Post.png"
+            }
+          },
+          "1599773983795-5": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/opb_greyscale.png"
+            }
+          },
+          "1600811641188": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/huffpost-logo_bw.png"
+            }
+          },
+          "1600811852718": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/New-York-Times-Logo_bw.png"
+            }
+          }
+        },
+        "block_order": [
+          "1599773983795-0",
+          "1599773983795-1",
+          "1599773983795-2",
+          "1599773983795-3",
+          "1599773983795-4",
+          "1599773983795-5",
+          "1600811641188",
+          "1600811852718"
+        ],
+        "settings": {
+          "title": "Featured in",
+          "bg_color": "#fafafa",
+          "logo_opacity": 75
+        }
+      },
+      "list-collections": {
+        "type": "list-collections",
+        "blocks": {
+          "1600470209560": {
+            "type": "collection",
+            "settings": {
+              "collection": "booklet-bundles",
+              "collection_name": "Booklet Bundles",
+              "image": ""
+            }
+          },
+          "1600470028824": {
+            "type": "collection",
+            "settings": {
+              "collection": "booklets",
+              "collection_name": "Booklets",
+              "image": ""
+            }
+          },
+          "1600470195467": {
+            "type": "collection",
+            "settings": {
+              "collection": "book",
+              "collection_name": "Books",
+              "image": ""
+            }
+          },
+          "1600470070229": {
+            "type": "collection",
+            "settings": {
+              "collection": "dvd",
+              "collection_name": "DVDs",
+              "image": ""
+            }
+          },
+          "1600470094753": {
+            "type": "collection",
+            "settings": {
+              "collection": "ebook",
+              "collection_name": "Ebooks",
+              "image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1600470209560",
+          "1600470028824",
+          "1600470195467",
+          "1600470070229",
+          "1600470094753"
+        ],
+        "settings": {
+          "header_height": "small",
+          "display_type": "selected",
+          "title": "Shop by Category",
+          "grid": 6,
+          "rows": 2,
+          "enable_reviews": false,
+          "scroll": "horizontally"
+        }
+      },
+      "branding-slideshow": {
+        "type": "branding-slideshow",
+        "blocks": {
+          "1600912949970": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/EOL_Guideline_series_2560x920.png",
+              "overlay_opacity": 0,
+              "overlay_color": "#fff",
+              "title": "",
+              "description": "",
+              "flex_align": "align--middle-center",
+              "text_color": "text-light",
+              "transparent": true,
+              "link_text": "",
+              "link": "",
+              "button_image": ""
+            }
+          },
+          "1600963358889": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Gone_from_my_sight_and_11th_hr_2560x920.png",
+              "overlay_opacity": 0,
+              "overlay_color": "#fff",
+              "title": "",
+              "description": "",
+              "flex_align": "align--middle-center",
+              "text_color": "text-light",
+              "transparent": true,
+              "link_text": "",
+              "link": "",
+              "button_image": ""
+            }
+          }
+        },
+        "block_order": [
+          "1600912949970",
+          "1600963358889"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 9,
+          "height": "screen-height-two-thirds",
+          "show_dots": false
+        }
+      },
+      "cart": {
+        "type": "cart",
+        "settings": {
+          "allow_note": true,
+          "allow_tax_text": true,
+          "custom_tax_text": "",
+          "shipping_calculator": true,
+          "shipping_calculator_default_country": "United States",
+          "cart_show_additional_buttons": true
+        }
+      },
+      "media-blog": {
+        "type": "media-blog",
+        "settings": {
+          "show_rss": false,
+          "show_hero": true,
+          "hero_image": "shopify:\/\/shop_images\/CW-130-3277080912-O-3367749488-O_copy_ef7d5222-cf7d-469b-9987-290757a57059.jpg",
+          "show_author": false,
+          "show_date": false,
+          "show_button": true,
+          "show_comments": false,
+          "show_tags": false
+        }
+      },
+      "1601007915983": {
+        "type": "index-hero-gdc",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/missingphoto_d218b74d-f9d9-41f7-8fc6-490b852c3c18.jpg",
+          "parallax": false,
+          "height": "screen-height-full",
+          "overlay_opacity": 0,
+          "overlay_color": "#ffffff",
+          "title": "Connecting families with the resources they need to navigate the dying process, from diagnosis to grief.",
+          "description": "",
+          "flex_align": "align--middle-left",
+          "text_color": "text-light",
+          "transparent": true,
+          "link_text": "View products",
+          "link": "shopify:\/\/collections"
+        }
+      },
+      "1601165661604": {
+        "type": "index-logo-list",
+        "blocks": {
+          "1601165661604-0": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Content_marketing_awards_2015--clear.png"
+            }
+          },
+          "1601165661604-1": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/World_humanitarian_awards_2015--clear.png"
+            }
+          },
+          "1601165661604-2": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/National_health_information_awards_2015--clear.png"
+            }
+          },
+          "1601165661604-3": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Bethel_film_fest_52_2015--clear.png"
+            }
+          },
+          "1601165661604-4": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Davey_awards_2015--clear.png"
+            }
+          },
+          "1601165661604-5": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Telly_Awards_2015--clear.png"
+            }
+          },
+          "1601166539875": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/International_film_festival_for_environment_health_culture_2015--clear.png"
+            }
+          },
+          "1601166555412": {
+            "type": "logo-item",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/APHA_Global_Public_Health_Film_Festival_2015--clear.png"
+            }
+          }
+        },
+        "block_order": [
+          "1601165661604-0",
+          "1601165661604-1",
+          "1601165661604-2",
+          "1601165661604-3",
+          "1601165661604-4",
+          "1601165661604-5",
+          "1601166539875",
+          "1601166555412"
+        ],
+        "settings": {
+          "title": "Award Winning Films",
+          "bg_color": "#fafafa",
+          "logo_opacity": 100
+        }
+      },
+      "gdc-agency-chart": {
+        "type": "gdc-agency-chart",
+        "settings": {
+          "button_1_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1067\/6860\/files\/BKB_Big_Order_Form_84f77c20-f105-45a1-b377-35f50df73d93.pdf?v=1592863295",
+          "button_1_text": "Printable Order Form (PDF)",
+          "button_2_url": "",
+          "button_2_text": "Product Catalogue (PDF)"
+        }
+      },
+      "1604540883b990fa4a": {
+        "type": "gdc-index-video",
+        "disabled": true,
+        "settings": {
+          "title": "Video",
+          "video_embed": "<iframe width=\"1344\" height=\"635\" src=\"https:\/\/www.youtube.com\/embed\/oP9gp9-G9cM?modestbranding=1\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"
+        }
+      }
+    },
+    "content_for_index": [
+      "1601007915983",
+      "1599773983795",
+      "1595616909407",
+      "1601165661604",
+      "1595625975995",
+      "1604540883b990fa4a",
+      "1599773850599",
+      "1595625357893",
+      "index-blog",
+      "1595625957717",
+      "1595625870894"
+    ]
+  },
+  "presets": {
+    "Clean": {
+      "text_color": "#545454",
+      "bg_color": "#ffffff",
+      "secondary_bg_color": "#F7F7F7",
+      "accent_bright": "#b1945c",
+      "accent_secondary": "#8191a4",
+      "site_border_color": "#F0F0F0",
+      "link_color": "#545454",
+      "link_hover_color": "#b1945c",
+      "header_bg": "#ffffff",
+      "header_link": "#545454",
+      "header_link_hover": "#b1945c",
+      "menu_bg_color": "#ffffff",
+      "menu_border_color": "#F0F0F0",
+      "menu_link_color": "#545454",
+      "menu_link_hover_color": "#b1945c",
+      "submenu_bg_color": "#ffffff",
+      "submenu_link_color": "#545454",
+      "submenu_link_hover_color": "#c5aa76",
+      "footer_bg": "#ffffff",
+      "footer_text": "#545454",
+      "footer_link": "#545454",
+      "footer_link_hover": "#b1945c",
+      "type_heading_font": "century_gothic_n7",
+      "type_heading_size": 90,
+      "type_base_font": "century_gothic_n4",
+      "type_body_size": 95,
+      "animations_enable": true,
+      "image_hover_enable": true,
+      "sale_tags_enable": true,
+      "sale_background_color": "#be563f",
+      "sale_text_color": "#ffffff",
+      "show_promo_modal": false,
+      "promo_dev_mode": false,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Open Sans",
+      "checkout_body_font": "Open Sans",
+      "checkout_accent_color": "#c5aa76",
+      "checkout_button_color": "#c5aa76",
+      "checkout_error_color": "#c85c42",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_header_social": true,
+            "show_header_search": true,
+            "show_account": true,
+            "message": false,
+            "color_bg": "#efeeec",
+            "color_text": "#545454",
+            "menu_primary": "main-menu"
+          }
+        },
+        "product": {
+          "type": "product",
+          "blocks": {
+            "product-tab-1": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "First",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            },
+            "product-tab-2": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "Second",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            },
+            "product-tab-3": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "Third",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "product-tab-1",
+            "product-tab-2",
+            "product-tab-3"
+          ],
+          "settings": {
+            "image_layout": "stacked",
+            "product_sticky_enable": true,
+            "show_breadcrumbs": true,
+            "show_share_buttons": true,
+            "product_show_vendor": false,
+            "show_payment_button": true,
+            "tabs_enable": true
+          }
+        },
+        "page-contact": {
+          "type": "page-contact",
+          "blocks": {
+            "contact-1": {
+              "type": "text",
+              "settings": {
+                "title": "Full Name"
+              }
+            },
+            "contact-2": {
+              "type": "email",
+              "settings": {
+                "title": "Email"
+              }
+            },
+            "contact-3": {
+              "type": "body",
+              "settings": {
+                "title": "Message"
+              }
+            },
+            "contact-4": {
+              "type": "spacer",
+              "settings": {
+                "line": false
+              }
+            },
+            "contact-5": {
+              "type": "formHeading",
+              "settings": {
+                "title": "Optional:"
+              }
+            },
+            "contact-6": {
+              "type": "checkbox",
+              "settings": {
+                "title": "Subscribe to the newsletter"
+              }
+            },
+            "contact-7": {
+              "type": "select",
+              "settings": {
+                "title": "How did you hear about us:",
+                "label-one": "- Pick an option -",
+                "label-two": "Instagram \/ Facebook",
+                "label-three": "Web search",
+                "label-four": "Print Ad",
+                "label-five": "From a friend",
+                "label-six": ""
+              }
+            }
+          },
+          "block_order": [
+            "contact-1",
+            "contact-2",
+            "contact-3",
+            "contact-4",
+            "contact-5",
+            "contact-6",
+            "contact-7"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "index-hero": {
+          "type": "index-hero",
+          "settings": {
+            "parallax": false,
+            "height": "screen-height-two-thirds",
+            "overlay_opacity": 0,
+            "flex_align": "align--middle-center",
+            "text_color": "text-dark"
+          }
+        },
+        "index-image-with-text": {
+          "type": "index-image-with-text",
+          "settings": {
+            "color": "#545454",
+            "background": "#f7f7f7",
+            "height": "screen-height-one-half",
+            "overlay_opacity": 0
+          }
+        },
+        "index-map": {
+          "type": "index-map",
+          "settings": {}
+        },
+        "index-slideshow": {
+          "type": "index-slideshow",
+          "blocks": {
+            "index-slideshow-0": {
+              "type": "image",
+              "settings": {
+                "overlay_opacity": 0,
+                "text_color": "text-dark"
+              }
+            },
+            "index-slideshow-1": {
+              "type": "image",
+              "settings": {
+                "overlay_opacity": 0,
+                "text_color": "text-dark"
+              }
+            }
+          },
+          "block_order": [
+            "index-slideshow-0",
+            "index-slideshow-1"
+          ],
+          "settings": {
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "height": "screen-height-one-half"
+          }
+        },
+        "index-collections-list": {
+          "type": "index-collections-list",
+          "blocks": {
+            "index-collections-list-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-3": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-collections-list-0",
+            "index-collections-list-1",
+            "index-collections-list-2",
+            "index-collections-list-3"
+          ],
+          "settings": {
+            "title": "Collections"
+          }
+        },
+        "index-background-video": {
+          "type": "index-background-video",
+          "settings": {
+            "overlay_opacity": 65
+          }
+        },
+        "index-look": {
+          "type": "index-look",
+          "blocks": {
+            "index-look-0": {
+              "type": "product",
+              "settings": {}
+            },
+            "index-look-1": {
+              "type": "product",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-look-0",
+            "index-look-1"
+          ],
+          "settings": {}
+        },
+        "index-testimonials": {
+          "type": "index-testimonials",
+          "blocks": {
+            "index-testimonial-0": {
+              "type": "testimonial",
+              "settings": {
+                "title": "Mark Corrigan"
+              }
+            },
+            "index-testimonial-1": {
+              "type": "testimonial",
+              "settings": {
+                "title": "Jeremy Usborne"
+              }
+            }
+          },
+          "block_order": [
+            "index-testimonial-0",
+            "index-testimonial-1"
+          ],
+          "settings": {}
+        },
+        "index-products": {
+          "type": "index-products",
+          "settings": {}
+        },
+        "index-blog": {
+          "type": "index-blog",
+          "settings": {}
+        },
+        "index-rich-text": {
+          "type": "index-rich-text",
+          "settings": {}
+        },
+        "index-newsletter": {
+          "type": "index-newsletter",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "index-hero",
+        "index-collections-list",
+        "index-image-with-text",
+        "index-products",
+        "index-testimonials",
+        "index-map",
+        "index-background-video",
+        "index-rich-text",
+        "index-slideshow",
+        "index-blog",
+        "index-look",
+        "index-newsletter"
+      ]
+    },
+    "Modern": {
+      "text_color": "#2b2b2b",
+      "bg_color": "#ffffff",
+      "secondary_bg_color": "#f7f9fa",
+      "accent_bright": "#007efc",
+      "accent_secondary": "#2B2B2B",
+      "site_border_color": "#f3f3f3",
+      "link_color": "#2b333b",
+      "link_hover_color": "#007efc",
+      "header_bg": "#ffffff",
+      "header_link": "#3b434b",
+      "header_link_hover": "#007efc",
+      "menu_bg_color": "#2b2b2b",
+      "menu_border_color": "#2b2b2b",
+      "menu_link_color": "#ffffff",
+      "menu_link_hover_color": "#c8e4f2",
+      "submenu_bg_color": "#2b2b2b",
+      "submenu_link_color": "#ffffff",
+      "submenu_link_hover_color": "#c8e4f2",
+      "footer_bg": "#1f1f1f",
+      "footer_text": "#ffffff",
+      "footer_link": "#e1e1e1",
+      "footer_link_hover": "#808080",
+      "type_heading_font": "monotype_news_gothic_n4",
+      "type_heading_size": 100,
+      "type_base_font": "monotype_news_gothic_n4",
+      "type_body_size": 95,
+      "animations_enable": false,
+      "image_hover_enable": false,
+      "sale_tags_enable": true,
+      "sale_background_color": "#ed6161",
+      "sale_text_color": "#ffffff",
+      "show_promo_modal": false,
+      "promo_dev_mode": false,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Open Sans",
+      "checkout_body_font": "Open Sans",
+      "checkout_accent_color": "#007efc",
+      "checkout_button_color": "#007efc",
+      "checkout_error_color": "#ed6161",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_header_social": true,
+            "show_header_search": true,
+            "show_account": true,
+            "message": false,
+            "color_bg": "#efeeec",
+            "color_text": "#545454",
+            "menu_primary": "main-menu"
+          }
+        },
+        "product": {
+          "type": "product",
+          "blocks": {
+            "product-tab-1": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "First",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            },
+            "product-tab-2": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "Second",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            },
+            "product-tab-3": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "Third",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "product-tab-1",
+            "product-tab-2",
+            "product-tab-3"
+          ],
+          "settings": {
+            "image_layout": "thumbnails",
+            "product_sticky_enable": false,
+            "show_breadcrumbs": true,
+            "show_share_buttons": false,
+            "product_show_vendor": false,
+            "show_payment_button": true,
+            "tabs_enable": false
+          }
+        },
+        "page-contact": {
+          "type": "page-contact",
+          "blocks": {
+            "contact-1": {
+              "type": "text",
+              "settings": {
+                "title": "Full Name"
+              }
+            },
+            "contact-2": {
+              "type": "email",
+              "settings": {
+                "title": "Email"
+              }
+            },
+            "contact-3": {
+              "type": "body",
+              "settings": {
+                "title": "Message"
+              }
+            },
+            "contact-4": {
+              "type": "spacer",
+              "settings": {
+                "line": false
+              }
+            },
+            "contact-5": {
+              "type": "formHeading",
+              "settings": {
+                "title": "Optional:"
+              }
+            },
+            "contact-6": {
+              "type": "checkbox",
+              "settings": {
+                "title": "Subscribe to the newsletter"
+              }
+            },
+            "contact-7": {
+              "type": "select",
+              "settings": {
+                "title": "How did you hear about us:",
+                "label-one": "- Pick an option -",
+                "label-two": "Instagram \/ Facebook",
+                "label-three": "Web search",
+                "label-four": "Print Ad",
+                "label-five": "From a friend",
+                "label-six": ""
+              }
+            }
+          },
+          "block_order": [
+            "contact-1",
+            "contact-2",
+            "contact-3",
+            "contact-4",
+            "contact-5",
+            "contact-6",
+            "contact-7"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "index-hero": {
+          "type": "index-hero",
+          "settings": {
+            "parallax": false,
+            "height": "screen-height-two-thirds",
+            "overlay_opacity": 0,
+            "flex_align": "align--middle-center",
+            "text_color": "text-dark"
+          }
+        },
+        "index-image-with-text": {
+          "type": "index-image-with-text",
+          "settings": {
+            "color": "#282c2e",
+            "background": "#f7f9fa",
+            "height": "screen-height-one-half",
+            "overlay_opacity": 0
+          }
+        },
+        "index-map": {
+          "type": "index-map",
+          "settings": {}
+        },
+        "index-slideshow": {
+          "type": "index-slideshow",
+          "blocks": {
+            "index-slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "index-slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-slideshow-0",
+            "index-slideshow-1"
+          ],
+          "settings": {
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "height": "screen-height-one-half"
+          }
+        },
+        "index-collections-list": {
+          "type": "index-collections-list",
+          "blocks": {
+            "index-collections-list-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-3": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-collections-list-0",
+            "index-collections-list-1",
+            "index-collections-list-2",
+            "index-collections-list-3"
+          ],
+          "settings": {
+            "title": "Collections"
+          }
+        },
+        "index-background-video": {
+          "type": "index-background-video",
+          "settings": {
+            "overlay_opacity": 65
+          }
+        },
+        "index-look": {
+          "type": "index-look",
+          "blocks": {
+            "index-look-0": {
+              "type": "product",
+              "settings": {}
+            },
+            "index-look-1": {
+              "type": "product",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-look-0",
+            "index-look-1"
+          ],
+          "settings": {}
+        },
+        "index-testimonials": {
+          "type": "index-testimonials",
+          "blocks": {
+            "index-testimonial-0": {
+              "type": "testimonial",
+              "settings": {
+                "title": "Mark Corrigan"
+              }
+            },
+            "index-testimonial-1": {
+              "type": "testimonial",
+              "settings": {
+                "title": "Jeremy Usborne"
+              }
+            }
+          },
+          "block_order": [
+            "index-testimonial-0",
+            "index-testimonial-1"
+          ],
+          "settings": {}
+        },
+        "index-products": {
+          "type": "index-products",
+          "settings": {}
+        },
+        "index-blog": {
+          "type": "index-blog",
+          "settings": {}
+        },
+        "index-rich-text": {
+          "type": "index-rich-text",
+          "settings": {}
+        },
+        "index-newsletter": {
+          "type": "index-newsletter",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "index-hero",
+        "index-collections-list",
+        "index-image-with-text",
+        "index-products",
+        "index-testimonials",
+        "index-map",
+        "index-background-video",
+        "index-rich-text",
+        "index-slideshow",
+        "index-blog",
+        "index-look",
+        "index-newsletter"
+      ]
+    },
+    "Bold": {
+      "text_color": "#040f0f",
+      "bg_color": "#ffffff",
+      "secondary_bg_color": "#f7f7f7",
+      "accent_bright": "#248232",
+      "accent_secondary": "#418383",
+      "site_border_color": "#f7f7f7",
+      "link_color": "#418383",
+      "link_hover_color": "#165858",
+      "header_bg": "#040f0f",
+      "header_link": "#ffffff",
+      "header_link_hover": "#cfe0d3",
+      "menu_bg_color": "#040f0f",
+      "menu_border_color": "#040f0f",
+      "menu_link_color": "#ffffff",
+      "menu_link_hover_color": "#cfe0d3",
+      "submenu_bg_color": "#040f0f",
+      "submenu_link_color": "#ffffff",
+      "submenu_link_hover_color": "#7a9f82",
+      "menu_transparent_color": "#ffffff",
+      "footer_bg": "#040f0f",
+      "footer_text": "#ffffff",
+      "footer_link": "#ffffff",
+      "footer_link_hover": "#74937c",
+      "type_heading_font": "cardo_n7",
+      "type_heading_size": 95,
+      "type_base_font": "harmonia_sans_n4",
+      "type_body_size": 100,
+      "animations_enable": true,
+      "image_hover_enable": false,
+      "sale_tags_enable": true,
+      "sale_background_color": "#444444",
+      "sale_text_color": "#ffffff",
+      "show_promo_modal": false,
+      "promo_dev_mode": false,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Open Sans",
+      "checkout_body_font": "Open Sans",
+      "checkout_accent_color": "#248232",
+      "checkout_button_color": "#268686",
+      "checkout_error_color": "#8b3f3f",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_header_social": true,
+            "show_header_search": true,
+            "show_account": true,
+            "message": false,
+            "color_bg": "#101A26",
+            "color_text": "#EEEEEE",
+            "menu_primary": "main-menu"
+          }
+        },
+        "product": {
+          "type": "product",
+          "blocks": {
+            "product-tab-1": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "First",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            },
+            "product-tab-2": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "Second",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            },
+            "product-tab-3": {
+              "type": "tab_richtext",
+              "settings": {
+                "title": "Third",
+                "raw_content": "<p>This tab content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "product-tab-1",
+            "product-tab-2",
+            "product-tab-3"
+          ],
+          "settings": {
+            "image_layout": "stacked",
+            "product_sticky_enable": true,
+            "show_breadcrumbs": true,
+            "show_share_buttons": true,
+            "product_show_vendor": false,
+            "show_payment_button": true,
+            "tabs_enable": true
+          }
+        },
+        "page-contact": {
+          "type": "page-contact",
+          "blocks": {
+            "contact-1": {
+              "type": "text",
+              "settings": {
+                "title": "Full Name"
+              }
+            },
+            "contact-2": {
+              "type": "email",
+              "settings": {
+                "title": "Email"
+              }
+            },
+            "contact-3": {
+              "type": "body",
+              "settings": {
+                "title": "Message"
+              }
+            },
+            "contact-4": {
+              "type": "spacer",
+              "settings": {
+                "line": false
+              }
+            },
+            "contact-5": {
+              "type": "formHeading",
+              "settings": {
+                "title": "Optional:"
+              }
+            },
+            "contact-6": {
+              "type": "checkbox",
+              "settings": {
+                "title": "Subscribe to the newsletter"
+              }
+            },
+            "contact-7": {
+              "type": "select",
+              "settings": {
+                "title": "How did you hear about us:",
+                "label-one": "- Pick an option -",
+                "label-two": "Instagram \/ Facebook",
+                "label-three": "Web search",
+                "label-four": "Print Ad",
+                "label-five": "From a friend",
+                "label-six": ""
+              }
+            }
+          },
+          "block_order": [
+            "contact-1",
+            "contact-2",
+            "contact-3",
+            "contact-4",
+            "contact-5",
+            "contact-6",
+            "contact-7"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "index-hero": {
+          "type": "index-hero",
+          "settings": {
+            "parallax": false,
+            "height": "screen-height-two-thirds",
+            "overlay_opacity": 0,
+            "flex_align": "align--middle-center",
+            "text_color": "text-dark"
+          }
+        },
+        "index-image-with-text": {
+          "type": "index-image-with-text",
+          "settings": {
+            "color": "#2d2d2d",
+            "background": "#f5f2ef",
+            "height": "screen-height-one-half",
+            "overlay_opacity": 0
+          }
+        },
+        "index-map": {
+          "type": "index-map",
+          "settings": {}
+        },
+        "index-slideshow": {
+          "type": "index-slideshow",
+          "blocks": {
+            "index-slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "index-slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-slideshow-0",
+            "index-slideshow-1"
+          ],
+          "settings": {
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "height": "screen-height-one-half"
+          }
+        },
+        "index-collections-list": {
+          "type": "index-collections-list",
+          "blocks": {
+            "index-collections-list-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "index-collections-list-3": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-collections-list-0",
+            "index-collections-list-1",
+            "index-collections-list-2",
+            "index-collections-list-3"
+          ],
+          "settings": {
+            "title": "Collections"
+          }
+        },
+        "index-background-video": {
+          "type": "index-background-video",
+          "settings": {
+            "overlay_opacity": 65
+          }
+        },
+        "index-look": {
+          "type": "index-look",
+          "blocks": {
+            "index-look-0": {
+              "type": "product",
+              "settings": {}
+            },
+            "index-look-1": {
+              "type": "product",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "index-look-0",
+            "index-look-1"
+          ],
+          "settings": {}
+        },
+        "index-testimonials": {
+          "type": "index-testimonials",
+          "blocks": {
+            "index-testimonial-0": {
+              "type": "testimonial",
+              "settings": {
+                "title": "Mark Corrigan"
+              }
+            },
+            "index-testimonial-1": {
+              "type": "testimonial",
+              "settings": {
+                "title": "Jeremy Usborne"
+              }
+            }
+          },
+          "block_order": [
+            "index-testimonial-0",
+            "index-testimonial-1"
+          ],
+          "settings": {}
+        },
+        "index-products": {
+          "type": "index-products",
+          "settings": {}
+        },
+        "index-blog": {
+          "type": "index-blog",
+          "settings": {}
+        },
+        "index-rich-text": {
+          "type": "index-rich-text",
+          "settings": {}
+        },
+        "index-newsletter": {
+          "type": "index-newsletter",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "index-hero",
+        "index-collections-list",
+        "index-image-with-text",
+        "index-products",
+        "index-testimonials",
+        "index-map",
+        "index-background-video",
+        "index-rich-text",
+        "index-slideshow",
+        "index-blog",
+        "index-look",
+        "index-newsletter"
+      ]
+    }
+  }
+}

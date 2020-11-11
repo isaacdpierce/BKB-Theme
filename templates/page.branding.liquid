@@ -1,0 +1,12 @@
+<!-- /templates/page.branding.liquid -->
+
+<div class="branding-title"><h2 class="theme">{{ page.title }}</h2></div>
+
+{% section 'branding-slideshow' %}
+
+<section class="branding-page">
+	<div>
+		{{ page.content }}
+	</div>
+	{% include "branding-contact-form" %}
+</section>

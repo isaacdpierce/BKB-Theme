@@ -1,0 +1,50 @@
+{% assign button_url = section.settings.button_url %}
+{% assign chart_title = section.settings.chart_title %}
+{% assign chart_text = section.settings.chart_text %}
+
+
+{% include 'gdc-discounts-chart' %}
+
+{% schema %} 
+{
+  "name": "Discount Chart Booklets", 
+  
+  "settings": [
+    {
+      "id": "chart_title",
+      "type": "text",
+      "label": "Chart Title" 
+    },
+    {
+      "id": "chart_text",
+      "type": "richtext",
+      "label": "Bottom section text" 
+    }
+  ],  
+  "blocks": [
+  { 
+    "type": "Quantity", 
+    "name": "Chart Item",
+    "settings": [
+    {
+      "type": "header",
+      "content": "Quantity Item"
+    },
+    
+    {
+      "id": "quantity",
+      "type": "text",
+      "label": "Quantity Parameter" 
+    },
+    {
+      "id": "price",
+      "type": "text",
+      "label": "Price" 
+    }
+    ]
+  }
+  ]
+}
+{% endschema %} 
+
+

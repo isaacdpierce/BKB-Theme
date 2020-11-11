@@ -1,0 +1,68 @@
+<!-- /snippets/agency-product-variants.liquid -->
+
+{% assign gdc_language_variant_titles = "" | split: ',' %}
+
+<div class="agency-product__variants">
+	{% for variant in product.variants %}
+		{% if variant.title == "English" or variant.title == "Spanish"%}
+			<div class="agency-product__variant">
+				<label for="updates[{{ variant.id }}]">
+					{{ variant.title }}
+				</label>
+				<div class="js-qty quantity-selector">
+					
+					{% assign variant_item = cart.items | where: 'variant_id', variant.id | first %}
+
+					<input type="text" 
+						class="js-qty__num quantity__input" 
+						name="updates[{{ variant.id }}]"
+						autocomplete="off" 
+						{% if variant_item.quantity > 0 %} 
+						value="{{variant_item.quantity}}" 
+						{% else %} 
+						value="0"
+						{% endif %}
+						min="0" 
+						pattern="[0-9]*" 
+						{% unless variant.available %}disabled="disabled"{% endunless %}/>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+
+	{% if product.variants.size > 2 %}
+	<input type="checkbox" id="{{ product.id }}" class="agency-product__dropdown-trigger">
+	<label for="{{ product.id }}" class="agency-product__dropdown-label"> </label>
+		{% for variant in product.variants %}
+				{% if variant.title != "English" and variant.title != "Spanish"%}
+				<div class="agency-product__dropdown">
+					<div class="agency-product__variant">
+						<label for="updates[{{ variant.id }}]">
+							{{ variant.title }}
+						</label>
+
+						<div class="js-qty quantity-selector">
+							<span class="js-qty__adjust js-qty__adjust--minus quantity__minus" tabindex="0">{% include "icon-minus" %}</span>							
+								{% assign variant_item = cart.items | where: 'variant_id', variant.id | first %}
+
+								<input type="text" 
+									class="js-qty__num quantity__input" 
+									name="updates[{{ variant.id }}]"
+									autocomplete="off" 
+									{% if variant_item.quantity > 0 %} 
+									value="{{variant_item.quantity}}" 
+									{% else %} 
+									value="0"
+									{% endif %}
+									min="0" 
+									pattern="[0-9]*" 
+									{% unless variant.available %}disabled="disabled"{% endunless %}/>
+								<span class="js-qty__adjust js-qty__adjust--plus quantity__plus" tabindex="0">{% include "icon-plus" %}</span>
+						</div>
+					</div>
+				</div>
+				{% endif %}
+		{% endfor %}
+
+	{% endif %}	
+</div>

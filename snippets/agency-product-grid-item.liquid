@@ -1,0 +1,22 @@
+<!-- /snippets/agency-product-grid-item.liquid -->
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign media = product.media[0] -%}
+
+<div class="agency-product ">
+  <a href="{{ product.url | within: collection }}" class="agency-product__title">{{ product.title }}</a>
+  <img class="agency-product__image"
+       alt="{{ media.alt | escape }}"
+       aria-label="{{ media.alt | escape }}"
+       src="{{ media.preview_image | img_url: '900x' }}"/>
+  <div>
+    <div class="agency-product__price strong"> 
+      <span>
+        {{ current_variant.price | money }}
+      </span>
+    </div>
+
+    {% include 'agency-product-variants' %}
+
+  </div>
+</div>
