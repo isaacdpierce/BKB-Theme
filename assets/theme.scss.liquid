@@ -14895,11 +14895,18 @@ button.mfp-close {
   margin-top: 60px;
 }
 
+.discounts-wrapper {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .agency-product-grid__btn {
   display: flex;
   justify-content: center;
   width: 49.5%;
-  min-width: 300px;
+  min-width: 320px;
   margin: 0 auto;
   border-bottom: 5px solid transparent;    
   
@@ -14994,7 +15001,7 @@ button.mfp-close {
 
 /*============ [GDC] Booklets Discounts ==================*/
 
-.gdc-discounts.gdc-hidden-chart {
+.gdc-discounts__wrapper.gdc-hidden-chart {
   overflow: hidden;
   max-height: 1px;
   opacity: 0;
@@ -15008,9 +15015,15 @@ button.mfp-close {
   padding: 10px;
 }
 
+.gdc-discounts__wrapper {
+  max-height: 1000px;
+  opacity: 1;
+  transition: opacity 1s, max-height 1s;
+}
+
 .gdc-discounts {
   width: 65%;
-  min-width: 350px;
+  min-width: 320px;
   max-width: 750px;
   margin: 0 auto;
   display: grid;
@@ -15043,6 +15056,7 @@ button.mfp-close {
 
 .gdc-discounts-btn {
  text-transform: uppercase; 
+ min-width: 320px;
 }
 
 .gdc-discounts__quantities {

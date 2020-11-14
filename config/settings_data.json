@@ -512,15 +512,13 @@
           "height": "image-height",
           "parallax": false,
           "overlay_opacity": 0,
-          "overlay_color": "#000",
+          "overlay_color": "#000000",
           "grid": 4,
           "enable_reviews": false,
           "show_featured_image": false,
-          "featured_image": "",
           "featured_heading": "Use this image showcase promotional content.",
-          "featured_text": "<p>Elaborate on it with rich text<p>",
+          "featured_text": "<p>Elaborate on it with rich text<\/p><p><\/p>",
           "featured_button_text": "Learn More",
-          "featured_button_link": "",
           "featured_color_text": "#ffffff",
           "featured_color_overlay": "#222222",
           "featured_overlay_opacity": 10
@@ -823,21 +821,222 @@
           "logo_opacity": 100
         }
       },
-      "gdc-agency-chart": {
-        "type": "gdc-agency-chart",
-        "settings": {
-          "button_1_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1067\/6860\/files\/BKB_Big_Order_Form_84f77c20-f105-45a1-b377-35f50df73d93.pdf?v=1592863295",
-          "button_1_text": "Printable Order Form (PDF)",
-          "button_2_url": "",
-          "button_2_text": "Product Catalogue (PDF)"
-        }
-      },
       "1604540883b990fa4a": {
         "type": "gdc-index-video",
         "disabled": true,
         "settings": {
           "title": "Video",
           "video_embed": "<iframe width=\"1344\" height=\"635\" src=\"https:\/\/www.youtube.com\/embed\/oP9gp9-G9cM?modestbranding=1\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>"
+        }
+      },
+      "gdc-booklets-chart": {
+        "type": "gdc-booklets-chart",
+        "blocks": {
+          "0595673c-1bea-49eb-8d85-74977ff161a5": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "1 - 9 copies",
+              "price": "$3.00 each"
+            }
+          },
+          "c60702fb-e512-4987-a851-af179f7510fd": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "0 - 99 copies",
+              "price": "$2.00 each"
+            }
+          },
+          "26bfd38f-757a-4437-9f38-6cde4a01d5b3": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "100 - 249 copies",
+              "price": "$1.80 each"
+            }
+          },
+          "fe13e10c-7c95-42d4-83e9-8cc38a982d65": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "250 - 499 copies",
+              "price": "$1.70 each"
+            }
+          },
+          "e9ae966a-b8c6-4aad-8fea-855cbdfa2626": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "500 - 999 copies",
+              "price": "$1.60 each"
+            }
+          },
+          "7859155f-3ded-4881-9cd6-6e0faaf4b889": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "1000 - 2499 copies",
+              "price": "$1.50 each"
+            }
+          },
+          "716e4ef2-b0f9-4fba-9f5b-7dca60c3d694": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "2500 - 4999 copies",
+              "price": "$1.40 each"
+            }
+          },
+          "618b3fd9-b2ff-4619-9493-1fe100960d32": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "5000 - 9999 copies",
+              "price": "$1.30 each"
+            }
+          },
+          "d8dc976f-704d-4e00-b5bf-dcd93f1fe25f": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "10000 - 24999 copies",
+              "price": "$1.20 each"
+            }
+          }
+        },
+        "block_order": [
+          "0595673c-1bea-49eb-8d85-74977ff161a5",
+          "c60702fb-e512-4987-a851-af179f7510fd",
+          "26bfd38f-757a-4437-9f38-6cde4a01d5b3",
+          "fe13e10c-7c95-42d4-83e9-8cc38a982d65",
+          "e9ae966a-b8c6-4aad-8fea-855cbdfa2626",
+          "7859155f-3ded-4881-9cd6-6e0faaf4b889",
+          "716e4ef2-b0f9-4fba-9f5b-7dca60c3d694",
+          "618b3fd9-b2ff-4619-9493-1fe100960d32",
+          "d8dc976f-704d-4e00-b5bf-dcd93f1fe25f"
+        ],
+        "settings": {
+          "chart_title": "PRICING AND DISCOUNTS FOR BOOKLETS",
+          "chart_text": "<p>Please call 360.828.7132 for discounts on orders of 25,000 or more copies.<\/p><p>     Booklet orders may NOT be combined using multiple languages to  achieve a discount. <\/p><p>Pricing is for each title of booklet.<\/p>"
+        }
+      },
+      "gdc-dvds-chart": {
+        "type": "gdc-dvds-chart",
+        "blocks": {
+          "0f836f76-339d-46c1-a0e2-2b1f5ba183b6": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "1 - 9 copies",
+              "price": "$29.00 each"
+            }
+          },
+          "40fa97a0-2da5-4c0a-8375-8879e3910548": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "10 - 9 copies",
+              "price": "$26.00 each"
+            }
+          },
+          "53b68e3a-772a-4a06-b5b5-20bc76873067": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "20 - 29 copies",
+              "price": "$24.80 each"
+            }
+          },
+          "7dba3bfe-79ed-4cf9-bca4-c9d50af9c699": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "30+ copies",
+              "price": "$22.70 each"
+            }
+          }
+        },
+        "block_order": [
+          "0f836f76-339d-46c1-a0e2-2b1f5ba183b6",
+          "40fa97a0-2da5-4c0a-8375-8879e3910548",
+          "53b68e3a-772a-4a06-b5b5-20bc76873067",
+          "7dba3bfe-79ed-4cf9-bca4-c9d50af9c699"
+        ],
+        "settings": {
+          "chart_title": "PRICING AND DISCOUNTS FOR DVDs",
+          "chart_text": "<p>Please call 360.828.7132 for discounts on larger orders.<\/p>"
+        }
+      },
+      "gdc-eol-chart": {
+        "type": "gdc-eol-chart",
+        "blocks": {
+          "0af3c929-4417-4496-a121-a16844473634": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "1 unit",
+              "price": "$13.00 each"
+            }
+          },
+          "6fd96925-9506-4f13-9e4f-a90cd2b9de35": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "2 - 9 units",
+              "price": "$10.00 each"
+            }
+          },
+          "ae61e672-98e0-45a2-ade6-3122548ade02": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "10 - 19 units",
+              "price": "$9.50 each"
+            }
+          },
+          "388ff6dc-afb9-416f-8d07-4be942d9de84": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "20 - 49 units",
+              "price": "$9.00 each"
+            }
+          },
+          "eef85c15-e4cc-442b-8199-aa45c744a910": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "50 - 99 units",
+              "price": "$8.50 each"
+            }
+          },
+          "7cc2cb78-544f-45c0-9b3e-ed0095939897": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "100 - 199 units",
+              "price": "$8.00 each"
+            }
+          },
+          "99ba752c-5961-4513-a9ef-3dcbd6f11c77": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "200 - 499 units",
+              "price": "$7.50 each"
+            }
+          },
+          "c60a2770-3f93-45e3-bf28-6ce95cb816df": {
+            "type": "Quantity",
+            "settings": {
+              "quantity": "500+ units",
+              "price": "$7.00 each"
+            }
+          }
+        },
+        "block_order": [
+          "0af3c929-4417-4496-a121-a16844473634",
+          "6fd96925-9506-4f13-9e4f-a90cd2b9de35",
+          "ae61e672-98e0-45a2-ade6-3122548ade02",
+          "388ff6dc-afb9-416f-8d07-4be942d9de84",
+          "eef85c15-e4cc-442b-8199-aa45c744a910",
+          "7cc2cb78-544f-45c0-9b3e-ed0095939897",
+          "99ba752c-5961-4513-a9ef-3dcbd6f11c77",
+          "c60a2770-3f93-45e3-bf28-6ce95cb816df"
+        ],
+        "settings": {
+          "chart_title": "End of Life Bundle Discounts",
+          "chart_text": "<p>Please call 360.828.7132 for discounts on larger orders.<\/p>"
+        }
+      },
+      "gdc-agency-chart-buttons": {
+        "type": "gdc-agency-chart-buttons",
+        "settings": {
+          "button_1_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1067\/6860\/files\/BKB_Big_Order_Form_84f77c20-f105-45a1-b377-35f50df73d93.pdf?v=1592863295",
+          "button_1_text": "Printable Order Form (PDF)",
+          "button_2_url": "",
+          "button_2_text": "Product Catalogue (PDF)"
         }
       }
     },

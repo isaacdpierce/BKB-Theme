@@ -7,7 +7,36 @@
   data-section-type="collection-hero"
   data-collection="{{ collection.url | default: '/collections/all' }}">
 
-{% section 'gdc-agency-chart'%}
+
+  <div class="collection__title collection__title--no-image">
+
+    <h1 class="hero__title">{{ collection.title }}</h1>
+      {%- if collection.description != '' -%}
+        <div class="hero__description rte">{{ collection.description }}</div>
+      {%- endif -%}
+      
+      <div class="discounts-wrapper">  
+
+          <button class="btn btn--large btn--full gdc-discounts-btn js-show-discounts">Show Booklets Discount Chart</button>
+          <div class="gdc-discounts__wrapper gdc-hidden-chart"> 
+            {% section 'gdc-booklets-chart' %}
+          </div>
+
+          <button class="btn btn--large btn--full gdc-discounts-btn js-show-discounts">Show Booklets Discount Chart</button>
+          <div class="gdc-discounts__wrapper gdc-hidden-chart"> 
+            {% section 'gdc-dvds-chart' %}
+          </div>
+
+          <button class="btn btn--large btn--full gdc-discounts-btn js-show-discounts">Show Booklets Discount Chart</button>
+          <div class="gdc-discounts__wrapper gdc-hidden-chart"> 
+            {% section 'gdc-eol-chart' %}
+          </div>
+      </div> 
+
+      <!-- Javascript for above form buttons is in gdc-agency-chart-buttons.liquid -->
+      {% section 'gdc-agency-chart-buttons'%}
+    </div>
+
 
   <div class="collection__products">
     <form  id="collection-agency-add" action="/cart/update" method="post" enctype="multipart/form-data">    
@@ -15,7 +44,6 @@
           {% assign product_type = '' %}
           	{%- for product in collection.products -%}
         <script type="application/json" class="bold-product-json">{{ product | json }}</script>
-
           		{% if product_type != product.type %}
               {% assign product_type = product.type %}
                  <h3 class="agency-product-grid__heading">{{ product_type }}</h3>

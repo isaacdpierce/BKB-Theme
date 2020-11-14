@@ -1,18 +1,4 @@
-<div class="collection__title collection__title--no-image">
-
-<h1 class="hero__title">{{ collection.title }}</h1>
-  {%- if collection.description != '' -%}
-    <div class="hero__description rte">{{ collection.description }}</div>
-  {%- endif -%}
-
-  <div class="discounts-wrapper" style="display: flex; flex-wrap: wrap;">   
-   		{% include 'gdc-discounts-booklet' %}
-        {% include 'gdc-discounts-dvd' %}
-        {% include 'gdc-discounts-bundles' %}
-  </div>
-
-  
-  <div class="gdc-agency-buttons-wrapper">
+<div class="gdc-agency-buttons-wrapper">
     <div class="agency-product-grid__btn">
       <a 
       class="btn btn--large btn--full" 
@@ -36,12 +22,11 @@
       </a>
     </div>
    </div>
-</div>
 
 
 {% schema %} 
   {
-    "name": "Chart Settings",   
+    "name": "Order Form Buttons",   
     "settings": [
       {
         "id": "button_1_url",
